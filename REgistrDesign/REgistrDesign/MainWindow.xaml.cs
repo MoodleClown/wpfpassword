@@ -37,7 +37,7 @@ namespace REgistrDesign
                 textBoxLogin.ToolTip = "Это поле введено не корректно!";
                 textBoxLogin.Background = Brushes.DarkRed;
                 
-           }else if(pass.Length < 5 || !pass.Any(Char.IsDigit))
+           }else if(pass.Length < 5 || !pass.Any(Char.IsDigit) || !pass.Any(Char.IsLower) || !pass.Any(Char.IsUpper) || pass.Intersect("#$%^&_").Count()==0)
             {
                 passBox.ToolTip = "Это поле введено не корректно!";
                 passBox.Background = Brushes.DarkRed;
